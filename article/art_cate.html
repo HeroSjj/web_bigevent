@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="/assets/css/article/art_cate.css">
+</head>
+
+<body>
+    <div class="layui-card">
+        <div class="layui-card-header">
+            <span>文章类别</span>
+            <button type="button" class="layui-btn layui-btn-normal" id="btn_addlei">添加类别</button>
+        </div>
+        <div class="layui-card-body">
+            <table class="layui-table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col width="200">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>分类名称</th>
+                        <th>分类别名</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr>
+                        <td>贤心</td>
+                        <td>2016-11-29</td>
+                        <td>人生就像是一场修行</td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- 添加弹出框 -->
+    <div class="tanchukuang">
+        <form class="layui-form" id="form_meiyuan">
+            <div class="layui-form-item">
+                <label class="layui-form-label">分类名称</label>
+                <div class="layui-input-block">
+                    <input type="text" name="name" required lay-verify="required" placeholder="请输入分类名称"
+                        autocomplete="off" class="layui-input" id="input_1">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">分类别名</label>
+                <div class="layui-input-block">
+                    <input type="text" name="alias" required lay-verify="required" placeholder="请输入分类别名"
+                        autocomplete="off" class="layui-input" id="input_2">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- 修改弹窗框 -->
+    <div class="tanchukuang_xiugai">
+        <form class="layui-form" id="form_xiugai" lay-filter="form_xiugai">
+            <!-- 设置一个隐藏域 保存Id的值 -->
+
+            <input type="hidden" name="Id">
+            <div class="layui-form-item">
+                <label class="layui-form-label">分类名称</label>
+                <div class="layui-input-block">
+                    <input type="text" name="name" required lay-verify="required" placeholder="请输入分类名称"
+                        autocomplete="off" class="layui-input" id="input_1">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">分类别名</label>
+                <div class="layui-input-block">
+                    <input type="text" name="alias" required lay-verify="required" placeholder="请输入分类别名"
+                        autocomplete="off" class="layui-input" id="input_2">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit lay-filter="formDemo">确认修改</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+    <script src="/assets/lib/layui/layui.all.js"></script>
+    <script src="/assets/lib/jquery.js"></script>
+    <script src="/assets/lib/template-web.js"></script>
+    <script src="/assets/js/baseAPI.js"></script>
+    <script src="/assets/js/article/art_cate.js"></script>
+
+
+</body>
+
+</html>
